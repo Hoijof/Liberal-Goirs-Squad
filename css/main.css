@@ -1,36 +1,53 @@
+
+body {
+	margin: 0;
+}
+
 .mainContainer {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
-	.menu {
+	.topbar {
 		position: fixed;
-		width: 198px;
-		height: 100%;
+		top: 0;
 		left: 0;
-		top: 0;	
-		border: 1px solid black;
+		height: 20px;
+		width: 100%;
+		border-bottom: 5px solid gray;
 		z-index: 10;
 	}
+		.topbar > span {
+			float: left;
+			height: 100%;
+			margin-left: 5px;
+			border-right: 2px solid gray;
+			padding-right: 5px;
+		}
 		.options {
 			background-color: gray;
-			list-style: none;
-			width: 100px;
 			text-align: center;
-			padding-left: 0;
-			margin-left: 40px;
+			padding: 0;
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
 			-khtml-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
+			float: left;
+			margin: 0;
 		}
 			.options > li {
-				height: 25px;
-				border: 1px solid black;
+				height: 15px;
 				cursor: pointer;
+				float: left;
+				padding: 5px;
+				padding-top: 0;
+				border-right: 1px solid black;
+			}
+			.options > li:last-child {
+				border: none;
 			}
 			.options > li:hover {
 				background-color: white;
@@ -42,8 +59,8 @@
 				.options > li > ul {
 					display: none;
 					background-color: gray;
-					margin-left: 99px;
-					margin-top: -19px;
+					position: absolute;
+					margin-left: -6px;
 					width: 240px;
 					z-index: 100;
 					list-style: none;
@@ -55,7 +72,6 @@
 					display: block;
 				}
 					.options > li > ul > li {
-						/*padding-top: 10px;*/
 						height: 25px;
 						border-left: 5px solid black;
 						-webkit-touch-callout: none;
@@ -68,6 +84,9 @@
 					.options > li > ul > li:hover {
 						border-left: 5px solid white;
 					}
+		
+
+
 		.menuList {
 			list-style: none;
 		}
@@ -92,7 +111,7 @@
 				}
 				.menuList > li:active {
 					background-color: gray;
-					color: white;
+					border-bottom: 5px solid white;
 				}
 			/* MENU DISPLAY SUCH AS STATS */
 			.menuDisplay {
@@ -115,7 +134,21 @@
 	.result {
 		position: fixed;
 		height: 100%;
-		left: 200px;
-		top: 0;
+		width: 100%;
+		top: 25px;
+	}
+
+	/* MAIN SCREEN */
+	.mainScreen {
+		height: 330px;
+		padding: 10px;
+		width: 600px;
+		text-align: center;
+		background-color: black;
+		color: white;
+		font-family: monospace;
+		font-weight: bold;
+		margin: auto;
+		margin-top: 10px;
 	}
 

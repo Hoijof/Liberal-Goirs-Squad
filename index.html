@@ -2,9 +2,15 @@
 
 <html>
 	<head>
-	  <script src="src/libraries/jquery-1.11.1.js"></script>	 
+	  <script src="js/libraries/jquery-1.11.1.js"></script>	 
+	  <script src="js/libraries/genericFunctions.js"></script>	 
+	  <script src="js/libraries/jqueryFunctions.js"></script>
+	  <script src="js/libraries/HtmlCreator.js"></script>
+	  <script src="js/libraries/extendedFunctions.js"></script>
 	  <script src="js/Constants.js"></script>
 	  <script src="js/Entity.js"></script>  
+	  <script src="js/Squad.js"></script>  
+	  <script src="js/Squads.js"></script>  
 	  <script src="js/World.js"></script>
 	  <script src="js/main.js"></script>
 
@@ -13,6 +19,35 @@
 	<body>
 
 	  <div id="mainContainer" class="mainContainer">
+	  	<div id="topbar" class="topbar">
+	  		<span id="location">Location: A place </span>
+	  		<span id="action">Action: laying low </span>
+	  		<span id="money">Money: 0</span>
+
+	  		<ul id="options" class="options">
+	  			<li id="menuActivism"> <a href="#">Activism</a> 
+	  				<ul>
+	  					<li> Go forth to stop EVIL </li>
+	  					<li> Cancel this Squad's Departure </li>
+	  					<li> Activate Liberals</li>
+	  					<li> Sleepers</li>
+	  					<li> PATRIOTISM: fly a flag here ($20)</li>
+	  					<li> Wait a day</li>
+	  				</ul>
+	  			</li>
+	  			<li id="menuPlanning"> <a href="#">Planning</a>
+	  				<ul>
+	  					<li> Equip Squad </li>
+	  					<li> Vehicles </li>
+	  					<li> Review Assets and Form Squads</li>
+	  					<li> The Status fo the Liberal Agenda</li>
+	  					<li> FREE SPEECH: the Liberal Slogan</li>
+	  					<li> Live to fight EVIL another day</li>
+	  				</ul>
+	  			</li>
+	  		</ul>
+	  	</div>
+	  		<!-- 
 	  	<div id="menu" class="menu">
 	  		<ul id="options" class="options">
 	  			<li id="menuActivism"> <a href="#">Activism</a> 
@@ -39,7 +74,7 @@
 	  		<ul id="stats" class="menuDisplay">
 	  			<li id="statsMoney"> Money : 0 </li>
 	  		</ul>
-	  	</div>
+	  	</div> -->
 	  	<div id="result" class="result">
 
 	  	</div>

@@ -1,12 +1,12 @@
 function Entity() {
 	this.basics = {
-		name = "Goirs",
-		surname = "Golpeo",
-		placeOfBirth = "Indiagoirs",
-		Profession = "College Student",
-		sex = "Male",
-		dateOfBirth = "January 24, 1984",
-		age = "24"
+		name: "Goirs",
+		surname: "Golpeo",
+		placeOfBirth: "Indiagoirs",
+		Profession: "College Student",
+		sex: "Male",
+		dateOfBirth: "January 24, 1984",
+		age: "24"
 	}
 	this.health = {
 		head: 100,
@@ -34,7 +34,7 @@ function Entity() {
 	}
 
 	this.codeName = "Hoijof";
-	this.weapon = none;
-	this.clothes = none;
-	this.car = none;
+	this.weapon = 'none';
+	this.clothes = 'none';
+	this.car = 'none';
 }

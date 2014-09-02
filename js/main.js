@@ -1,11 +1,13 @@
-function setWidth() {
-    $('#result').css('width', $(window).width() - 200);
+function setSize() {
+    var win = $(window);
+    $('#result').css({height: win.height-30});
+    $('#menu').css('height', win.height() - 30);
 }
 
 $(document).ready(function() {
-    setWidth();
+    setSize();
     $(window).resize(function() {
-        setWidth();
+        setSize();
     });
 
     $("#menuIndex").on("click", function(){
@@ -17,4 +19,7 @@ $(document).ready(function() {
     $("#menuGo").on("click", function(){
     	$("#result").html("Go!");
     });
+
+    var player = new Entity();
+    characterCreation(player);
 });
