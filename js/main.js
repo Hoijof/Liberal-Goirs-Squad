@@ -1,7 +1,14 @@
+var showBar = false,
+    stage = "mainScreen",
+    levelHandler = new LevelHandler(),
+    player = new Entity();
+
 function setSize() {
     var win = $(window);
-    $('#result').css({height: win.height-30});
-    $('#menu').css('height', win.height() - 30);
+    if (showBar) {
+        $('#result').css({height: win.height-30});
+        $('#menu').css('height', win.height() - 30);
+    } 
 }
 
 $(document).ready(function() {
@@ -10,16 +17,7 @@ $(document).ready(function() {
         setSize();
     });
 
-    $("#menuIndex").on("click", function(){
-    	$("#result").html("Index!");
-    });
-    $("#menuStadistics").on("click", function(){
-    	$("#result").html("Stadistics!");
-    });
-    $("#menuGo").on("click", function(){
-    	$("#result").html("Go!");
-    });
+    levelHandler.update();
 
-    var player = new Entity();
     characterCreation(player);
 });

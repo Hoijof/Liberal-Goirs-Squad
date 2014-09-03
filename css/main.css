@@ -146,8 +146,7 @@ body {
 		text-align: center;
 		background-color: black;
 		color: white;
-		font-family: monospace;
-		font-weight: bold;
+		font-family: fixedsys;
 		margin: auto;
 		margin-top: 10px;
         -webkit-touch-callout: none;
@@ -158,3 +157,16 @@ body {
         user-select: none;
 	}
 
+
+	/* CHARACTER CREATION */
+
+	.answer {
+		cursor: pointer;
+		text-align: left;
+	}
+
+	.optionGray {
+		color: gray;
+		width: 340px;
+		float: right
+	}
