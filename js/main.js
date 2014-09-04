@@ -1,7 +1,8 @@
 var showBar = false,
     stage = "mainScreen",
     levelHandler = new LevelHandler(),
-    player = new Entity();
+    player = new Entity(),
+    world = new World();
 
 function setSize() {
     var win = $(window);

@@ -24,9 +24,6 @@ LevelHandler.prototype.update = function() {
 					that.changeStage("characterCreation");
 				}
 			});
-			$("#result").on("click", function(){
-				that.changeStage("characterCreation");
-			})
 		break;	
 		case "characterCreation": /******************/
 			// finish check
@@ -88,6 +85,25 @@ LevelHandler.prototype.update = function() {
 					case 116:
 					break;
 					default:
+						switch (that.subStage) {
+							case 0:
+								$("#answerA").html().indexOf("[ ]") === -1 ? world.mode.classic = true : world.mode.classic = false;
+								(($("#answerB").html().indexOf("[ ]") === -1) && ($("#answerA").html().indexOf("[ ]") > -1)) ? world.mode.fire = true : world.mode.fire = false;
+								$("#answerC").html().indexOf("[ ]") === -1 ? world.mode.nightmare = true : world.mode.nightmare = false;
+								$("#answerD").html().indexOf("[ ]") === -1 ? world.mode.extendedEngame = true : world.mode.extendedEngame = false;
+								$("#answerE").html().indexOf("[ ]") === -1 ? world.mode.marathon = true : world.mode.marathon = false; 
+							break;
+							case 1:
+								$("#answerA").html().indexOf("[ ]") === -1 ? world.objective = "noDemocrat" : world.mode.classic = "Democrat";
+							break;
+							case 2:
+								player.basics.name = $("#answerA").html();
+								player.basics.surname = $("#answerB").html();
+								player.basics.sex = $("#answerC").html();
+								player.basics.city = $("#answerD").html();
+								$("#historyInput").html() === I18.CHARACTER_CREATION.THIRD_QUESTION.HISTORY_SELF ? player.characterCreationOwn = true : player.characterCreationOwn = false;
+							break;
+						}
 						that.subStage += 1;
 						that.exitStage();
 						that.update();
@@ -156,8 +172,8 @@ LevelHandler.prototype.update = function() {
 			}
 		break;
 		case "loadMenu": /******************/
-			showBar = true;
-			$("#topbar").show();
+			//showBar = true;
+			//$("#topbar").show();
 			$("#result").html(HtmlCreator.createElem('div', 'mainScreen', 'mainScreen', "<br><br>THAT'S ALL FOR NOW.<br><br>WAIT FOR THE NEXT UPDATE!"));
 		break;
 	}
@@ -174,7 +190,6 @@ LevelHandler.prototype.exitStage = function() {
 	switch(stage) {
 		case "mainScreen":
 			$(document).unbind();
-			$("#result").unbind("click");
 		break;
 		case "characterCreation":
 			$(document).unbind();

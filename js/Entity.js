@@ -2,7 +2,7 @@ function Entity() {
 	this.basics = {
 		name: "Goirs",
 		surname: "Golpeo",
-		placeOfBirth: "Indiagoirs",
+		city: "Indiagoirs",
 		Profession: "College Student",
 		sex: "Male",
 		dateOfBirth: "January 24, 1984",
@@ -37,4 +37,5 @@ function Entity() {
 	this.weapon = 'none';
 	this.clothes = 'none';
 	this.car = 'none';
+	this.isFounder = false;
 }
